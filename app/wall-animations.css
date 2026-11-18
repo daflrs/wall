@@ -1,0 +1,30 @@
+/* Wall animations: imported in app/layout.tsx */
+
+@keyframes post-in {
+  0% { opacity: 0; transform: translateY(-10px) scale(0.98); }
+  60% { opacity: 1; transform: translateY(2px) scale(1.005); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes post-glow {
+  0% { background-color: rgb(219 234 254); }
+  100% { background-color: transparent; }
+}
+
+.animate-post-in {
+  animation: post-in 450ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Posts that arrive live: pop in, then a soft blue highlight fades away */
+.animate-post-glow {
+  animation:
+    post-in 450ms cubic-bezier(0.22, 1, 0.36, 1) both,
+    post-glow 2.5s ease-out 300ms both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-post-in,
+  .animate-post-glow {
+    animation: none;
+  }
+}
