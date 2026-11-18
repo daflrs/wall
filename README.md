@@ -2,7 +2,7 @@
 
 A 2008-style Facebook Wall rebuilt with modern tools: visitors write on Dangie Flores's wall, attach a photo, and every post appears for everyone instantly.
 
-**Live demo:** _add your Vercel production URL here_
+**Live site using Vercel:** [wall-steel-psi.vercel.app](https://wall-steel-psi.vercel.app/)
 
 ## Stack
 
